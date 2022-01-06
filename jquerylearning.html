@@ -1,0 +1,283 @@
+<DOCTYP! html>
+    <html>
+        <head>
+            <link rel="stylesheet" href="jquerylearning.css">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+            <script src="jquerylearning.js"></script>
+        </head>
+        <body>
+            <div class="nav">
+                <a class="links" href="bigCalender.html">Creators</a>
+                <a class="links" href="#">Library</a>
+                <a class="links" href="">Scheduling</a>
+                <a class="links" href="#">Important Dates</a>
+                <a class="links" href="#">Holidays</a>
+            </div>
+            <div class="large-box">
+                <div class="left-box">
+                    <h2 class="left-box-text">How To Use This App</h2>
+                    <p class="left-box-text">This app is to help organize the things you have to do in a day.
+                         We will later add an option to add a time to items on the list</p>
+                </div>
+                <div class="middle-box">
+                    <div class="text-button-container">
+                        <input class="text-box" id="text" type="text" placeholder="What do you have to do?">
+                        <button class="add-button" type="button">Add</button>
+                        <button class="important-button" type="button">Important Item</button>
+                        <button class="clear-button" type="button">Clear</button>
+                    </div>
+                    <div class="list-container">
+                        <ul>
+                            <lh>Things to do...</lh>
+                        </ul>
+                        <div class="calender-text-button-container">
+                            <input id="calender-text-box-event" class="calender-text-box" type="text" placeholder="What is the event?">
+                            <select id="calender-box-day" class="calender-box-day">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5</option>
+                                <option value="6">6</option>
+                                <option value="7">7</option>
+                                <option value="8">8</option>
+                                <option value="9">9</option>
+                                <option value="10">10</option>
+                                <option value="11">11</option>
+                                <option value="12">12</option>
+                                <option value="13">13</option>
+                                <option value="14">14</option>
+                                <option value="15">15</option>
+                                <option value="16">16</option>
+                                <option value="17">17</option>
+                                <option value="18">18</option>
+                                <option value="19">19</option>
+                                <option value="20">20</option>
+                                <option value="21">21</option>
+                                <option value="22">22</option>
+                                <option value="23">23</option>
+                                <option value="24">24</option>
+                                <option value="25">25</option>
+                                <option value="26">26</option>
+                                <option value="27">27</option>
+                                <option value="28">28</option>
+                                <option value="29">29</option>
+                                <option value="30">30</option>
+                                <option value="31">31</option>
+                            </select>
+                            <select id="month-select">
+                                <option value="jan">Jan</option>
+                                <option value="feb">Feb</option>
+                                <option value="mar">Mar</option>
+                                <option value="apr">Apr</option>
+                                <option value="may">May</option>
+                                <option value="jun">Jun</option>
+                                <option value="jul">Jul</option>
+                                <option value="aug">Aug</option>
+                                <option value="sep">Sep</option>
+                                <option value="oct">Oct</option>
+                                <option value="nov">Nov</option>
+                                <option value="dec">Dec</option>
+                            </select>
+                            <button class="add-calender-button" type="button">Add event</button>
+                            <button class="calender-clear-button" type="button">Clear Calender</button>
+                            <button class="set-month-button" type="button">Set Month</button>
+                        </div>
+
+                        <div class="grid">
+                            <div class="month-row">
+                                <div class="grid-box month">Month</div>
+                            </div>
+                            <div class="title-row">
+                                <div class="grid-box">Sundays</div>
+                                <div class="grid-box">Monday</div>
+                                <div class="grid-box">Tuesday</div>
+                                <div class="grid-box">Wednesday</div>
+                                <div class="grid-box">Thursday</div>
+                                <div class="grid-box">Friday</div>
+                                <div class="grid-box">Saturday</div>
+                            </div>
+                            <div class="top-row">
+                                <div class="grid-box sunday" id="0"><h3 class="event-display"></h3></div>
+                                <div class="grid-box monday" id="1"><h3 class="event-display"></h3></div>
+                                <div class="grid-box tuesday" id="2"><h3 class="event-display"></h3></div>
+                                <div class="grid-box wednesday" id="3"><h3 class="event-display"></h3></div>
+                                <div class="grid-box thursday" id="4"><h3 class="event-display"></h3></div>
+                                <div class="grid-box friday" id="5"><h3 class="event-display"></h3></div>
+                                <div class="grid-box saturday" id="6"><h3 class="event-display"></h3></div>
+                            </div>
+                            <div class="middle-row">
+                                <div class="grid-box sunday" id="7"></div>
+                                <div class="grid-box monday" id="8"></div>
+                                <div class="grid-box tuesday" id="9"></div>
+                                <div class="grid-box wednesday" id="10"></div>
+                                <div class="grid-box thursday" id="11"></div>
+                                <div class="grid-box friday" id="12"></div>
+                                <div class="grid-box saturday" id="13"></div>
+                            </div>
+                            <div class="second-middle-row">
+                                <div class="grid-box sunday" id="14"></div>
+                                <div class="grid-box monday" id="15"></div>
+                                <div class="grid-box tuesday" id="16"></div>
+                                <div class="grid-box wednesday" id="17"></div>
+                                <div class="grid-box thursday" id="18"></div>
+                                <div class="grid-box friday" id="19"></div>
+                                <div class="grid-box saturday" id="20"></div>
+                            </div>
+                            <div class="bottom-row">
+                                <div class="grid-box sunday " id="21"></div>
+                                <div class="grid-box monday" id="22"></div>
+                                <div class="grid-box tuesday" id="23"></div>
+                                <div class="grid-box wednesday" id="24"></div>
+                                <div class="grid-box thursday" id="25"></div>
+                                <div class="grid-box friday" id="26"></div>
+                                <div class="grid-box saturday" id="27"></div>
+                            </div>
+                            <div class="last-row">
+                                <div class="grid-box sunday" id="28"></div>
+                                <div class="grid-box monday" id="29"></div>
+                                <div class="grid-box tuesday" id="30"></div>
+                                <div class="grid-box wednesday" id="31"></div>
+                                <div class="grid-box thursday" id="32"></div>
+                                <div class="grid-box friday" id="33"></div>
+                                <div class="grid-box saturday" id="34"></div>
+                            </div>
+                            <div class="extra-row">
+                                <div class="grid-box sunday" id="35"></div>
+                                <div class="grid-box monday" id="36"></div>
+                                <div class="grid-box tuesday" id="37"></div>
+                                <div class="grid-box wednesday" id="38"></div>
+                                <div class="grid-box thursday" id="39"></div>
+                                <div class="grid-box friday" id="40"></div>
+                                <div class="grid-box saturday" id="41"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="right-box">
+                    <h2 class="right-box-text">How To Use This App</h2>
+                    <p class="right-box-text">This app is to help organize the things you have 
+                    to do in a day. We will later add an option to add a time to items on the list</p>
+                </div>
+            </div>
+            <script>
+                $(".add-button").click(function() {
+                    $("ul").append("<li>" + document.getElementById("text").value +"</li>");
+
+                });
+                $(".clear-button").click(function(){
+                    $("li").remove();
+                });
+                $(".important-button").click(function(){
+                    $("ul").append("<li class='important' >" + document.getElementById("text").value +"</li>");
+
+                });
+                $(".calender-button").click(function() {
+                    $("."+document.getElementById("calender-text-box-day").value+"").append("<p class='calender-items'>"+ document.getElementById("calender-text-box-event").value +"</p>");
+                });
+                $(".calender-clear-button").click(function(){
+                    $(".sunday").empty();
+                    $(".monday").empty();
+                    $(".tuesday").empty();
+                    $(".wednesday").empty();
+                    $(".thursday").empty();
+                    $(".friday").empty();
+                    $(".saturday").empty();
+                });
+                /*
+                $(".calender-button").click(function(){
+                    if (document.getElementById("month-select").value == "Jan"){
+                        $(".right-box-text").text("hello");
+                    }
+                });*/
+
+                $(".set-month-button").click(function(){
+                //var month = document.getElementById("month-select").value;
+                var month = $("#month-select").val();
+                    if (month === "jan" ){
+                        $(".month-row .grid-box").text("January");
+                        clearCalender();
+                        //This is a for loop that helps put all of the dates on the grid-boxes
+                        var januaryDayNumbers = [5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35];
+                        for (let day of januaryDayNumbers){
+                            $("#"+day+"").append("<h3 class='month-number-dates' id=(day-4) >" + (day-4) + "</h3>");
+                        }
+                    } else if (month === "feb"){
+                        $(".month-row .grid-box").text("February");
+                        clearCalender();
+                        var februaryDayNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+                        for (let day of februaryDayNumbers){
+                            $("#"+day+"").append("<h3 class='month-number-dates'>"+day+"</h3>");
+                        }
+
+                    }else if (month === "mar"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("March");
+                        // used a for loop here in order to print all of the date numbers on each grid-box
+                        var marchDayNumbers = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31];
+                        for (let day of marchDayNumbers){
+                            $("#"+day+"").append("<h3 class='month-number-dates'>"+day+"</h3>");
+                        }
+                    }else if (month === "apr"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("April");
+                        var aprilDayNumbers = [4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33];
+                        for (let day of aprilDayNumbers){
+                            $("#"+day+"").append("<h3 class='month-number-dates'>"+(day-3)+"</h3>");
+                        }
+                    }else if (month === "may"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("May");
+                        var mayDayNumbers = [6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+                        for (let day of mayDayNumbers){
+                            $("#"+day+"").append("<h3 class='month-number-dates'>"+(day-5)+"</h3><ul id='"+day+"'class='event-display'></ul>");
+                        }
+                        $(".month-row .grid-box").text("May");
+                    }else if (month === "jun"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("June");
+                    }else if (month === "jul"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("July");
+                    }else if (month === "aug"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("August");
+                    }else if (month === "sep"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("September");
+                    }else if (month === "oct"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("October");
+                    }else if (month === "nov"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("November");
+                    }else if (month === "dec"){
+                        clearCalender();
+                        $(".month-row .grid-box").text("December");
+                    }
+                });
+                function clearCalender(){
+                    $(".sunday").empty();
+                    $(".monday").empty();
+                    $(".tuesday").empty();
+                    $(".wednesday").empty();
+                    $(".thursday").empty();
+                    $(".friday").empty();
+                    $(".saturday").empty();
+                }
+                // This button is going to be used to write the events inside 
+                // the grid-box with the respective date selected.
+                $(".add-calender-button").click(function(){
+                    var month = $("#month-select").val();
+                    var userDayNumber = parseInt($("#calender-box-day").val());
+                    var userEvent = $("#calender-text-box-event").val();
+                    $(".month-number-dates").text();
+                    alert("THe user wants to add to event '" + userEvent + "' to day " + userDayNumber + " of " + month + ".");
+                    var scanCalender = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36];
+                });
+                // for (let days of scanCalender){
+                //     if(days === )
+                // }
+            </script>
+        </body>
+    </html>

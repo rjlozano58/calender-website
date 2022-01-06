@@ -1,0 +1,16 @@
+.first-row-container{
+display: flex;
+flex-direction: row;
+}
+.red-box{
+width: 75%;
+height: 100px;
+background: red;
+margin: 5px;
+}
+.blue-box{
+    margin: 5px;
+    width: 25%;
+    height: 100px;
+    background: blue;
+}

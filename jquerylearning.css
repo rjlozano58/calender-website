@@ -1,0 +1,338 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.nav{
+    display: flex;
+    justify-content:center;
+    background: grey;
+}
+.links{
+    padding: 10px;
+    color:white;
+    background: black;
+    margin: 5px 10px;
+    text-decoration:none;
+    border: 3px groove lightgreen;
+}
+.links:hover{
+    border: 3px solid lightgreen;
+    animation-name: links;
+    animation-duration: 4s;
+    animation-iteration-count:infinite;
+}
+@keyframes links{
+    0%{background:white;color:black;border-radius: 0;}
+    25%{background:black;color:white;border-radius: 5px;}
+    50%{background:white;color:black;border-radius: 20px;}
+    75%{background:black;color:white;border-radius: 5px;}
+    100%{background:white;color:black;border-radius: 0;}
+}
+
+.large-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px 0;
+}
+.middle-box{
+    width: 50%;
+    height: auto;
+    background: black;
+    padding: 10px;
+
+}
+.left-box{
+    width: 20%;
+    background:grey;
+    height: auto;
+    padding: 10px;
+    color: black;
+}
+.left-box-text{
+    color: lightgreen;
+    text-shadow: 2px 2px 4px black;
+    transition: 0.3s;
+}
+.left-box-text:hover{
+    color: lightgreen;
+    text-shadow: 0 0 0 black;
+}
+.right-box{
+    width: 20%;
+    background:grey;
+    height: auto;
+    padding: 10px;
+    color: black;
+}
+.right-box-text{
+    color: lightgreen;
+}
+ul{
+    color:lightgreen;
+}
+li{
+    color: lightgreen;
+}
+.text-button-container{
+    width: 100%;
+    background: grey;
+    display: flex;
+    justify-content: center;
+}
+.list-container{
+    padding: 30px;
+    width:90%;
+    height:auto;
+}
+.text-box{
+    width: 50%;
+    color: lightgreen;
+    background: black;
+    border: 2px solid lightgreen;
+    display:block;
+    margin: 5px;
+}
+.add-button{
+    margin: 5px 2px;
+    padding: 5px;
+    background:lightgreen;
+    color:black;
+    font-family: helvetica;
+    border: 2px grooved black;
+}
+.important-button{
+    margin: 5px 2px;
+    padding: 5px;
+    background:lightgreen;
+    color:black;
+    font-family: helvetica;
+    border: 2px grooved black;
+}
+.clear-button{
+    margin: 5px 2px;
+    padding: 5px;
+    background:lightgreen;
+    color:black;
+    font-family: helvetica;
+    border: 2px grooved black;
+}
+.important{
+    list-style: none;
+    padding-left: 20px;
+}
+.important::before{
+    content: 'important: ';
+}
+.right-text-box{
+    height:25%;
+    background:lightgreen;
+    margin: 0 0 5px 0;
+    transition:0.3s;
+}
+.left-text-box
+p:hover{
+    background: black;
+    color: lightgreen;
+}
+.calender-text-box{
+    border: 2px solid lightgreen;
+    padding: 1px;
+    margin: 2px 0;
+    background: grey;
+    color: lightgreen;
+    transition: 0.3s;
+}
+.calender-text-box:hover{
+    border: 2px solid lightgreen;
+    background: lightgreen;
+    color:black;
+}
+.add-calender-button{
+    border: 2px grooved grey;
+    background: lightgreen;
+    color: black;
+    padding: 1px;
+    margin: 2px 0;
+    transition: 0.3s;
+}
+.add-calender-button:hover{
+    border: 2px grooved lightgreen;
+    background: black;
+    color: lightgreen;
+    padding: 1px;
+}
+.calender-box-day{
+    background: grey;
+    border: 2px solid lightgreen;
+    color: lightgreen;
+    transition: 0.3s;
+    padding: 0px;
+    margin: 2px 0;
+}
+.calender-box-day:hover{
+    background: lightgreen;
+    border: 2px solid lightgreen;
+    color: black;
+}
+.calender-clear-button{
+    border: 2px grooved grey;
+    background: lightgreen;
+    color: black;
+    padding: 1px;
+    transition: 0.3s;
+    margin: 2px 0;
+}
+.calender-clear-button:hover{
+    border: 2px grooved lightgreen;
+    background: black;
+    color: lightgreen;
+    padding: 1px;
+}
+#month-select{
+    border:2px solid lightgreen;
+    background: grey;
+    color:lightgreen;
+    transition:0.3s;
+    margin: 2px 0;
+}
+#month-select:hover{
+    border: 2px solid lightgreen;
+    background: lightgreen;
+    color:black;
+}
+.set-month-button{
+    border: 2px grooved grey;
+    background:lightgreen;
+    color: black;
+    padding: 1px;
+    margin: 2px 0;
+}
+.grid{
+    display:flex;
+    flex-direction: column;
+}
+.month-row{
+    display: flex;
+    flex-direction: row;
+}
+.month-row .grid-box{
+    width: 100%;
+    height: 20px;
+    text-align: center;
+}
+.title-row{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    color:lightblue;
+    text-align: center;
+}
+.title-row .grid-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+    height: auto;
+}
+.top-row{
+    display: flex;
+flex-direction: row;
+}
+.middle-row{
+    display: flex;
+    flex-direction: row;
+}
+.middle-row .grid-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+
+}
+.second-middle-row{
+    display: flex;
+    flex-direction: row;
+}
+.second-middle-row .grid-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+}
+.bottom-row{
+display: flex;
+flex-direction: row;
+}
+.bottom-row .grid-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+}
+.last-row{
+    display: flex;
+    flex-direction: row;
+}
+.last-row .grid-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+}
+.extra-row{
+    display: flex;
+    flex-direction: row;
+}
+.extra-row .grid-box{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-wrap: break-word;
+    display: block;
+}
+.grid-box{
+    width:100px;
+    height: 100px;
+    background:white;
+    border:2px solid rgb(255, 132, 153);
+    transition:0.3s;
+    padding: 5px;
+    color:rgb(255, 132, 153);
+}
+.grid-box:hover{
+    background:white;
+    border: 2px solid red;
+    color: red;
+}
+.title-row .grid-box:hover{
+    color: black;
+    background: white;
+}
+::placeholder{
+    color:lightgreen
+}
+select{
+    background: lightgreen;
+    border: 2px grooved grey;
+    color: black;
+}
+.month-number-dates{
+    display: flex;
+    justify-content: center;
+    top:0;
+    height:auto;
+    background:green;
+}
+.month{
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+.sunday#21{
+    background:grey;
+}
+.event-display{
+    width:100%;
+    height:80%;
+    background:grey;
+    font-size:15px;
+}
